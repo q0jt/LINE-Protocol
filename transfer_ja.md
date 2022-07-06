@@ -5,7 +5,7 @@
 1.　以下の構造体はEasy transfer Qr Codeで生成されます。
 SessionIdは`createSession()`で生成します。
 
-```
+```http
 POST /EXT/auth/feature-user/api/primary/mig/qr/prepare HTTP/2
 Host: gw.line.naver.jp
 Content-Type: application/x-thrift
@@ -49,7 +49,8 @@ res, err := CheckIfEncryptedE2EEKeyReceived(ctx, &CheckIfEncryptedE2EEKeyReceive
 ```
 
 `X-Line-Access`はSessionIdです
-```
+
+```http
 POST /EXT/auth/feature-user/lp/api/primary/mig/qr HTTP/2
 Host: gw.line.naver.jp
 X-Lal: ja_JP
